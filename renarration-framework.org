@@ -42,18 +42,18 @@
   descriptions for human reading.
 
 ** Semantic Style Sheet
-+ Is like a conventional Style Sheet (e.g. CSS). It has source
-information that is to be transformed to target. The transformation
-should be executed only under said conditions, which are also to be
-given in the semantic style sheet.  
++ Is like a conventional Style Sheet (e.g. CSS). It has source 
+  information that is to be transformed to target. The transformation
+  should be executed only under said conditions, which are also to be
+  given in the semantic style sheet.  
 
 + Content of the SSS includes which nodes (or portions of a node) to be
-transformed into target. i.e. source DOM-> target DOM mapping has to
-happen. Changes can be at the content level, flow level, style level,
-behaviour level. By content we are thinking that CRUD operations on
-the content of a node can be done. That is, text of a node can be
-Created, Updated, Read, Deleted. The same may apply for video, audio,
-images etc.  
+  transformed into target. i.e. source DOM-> target DOM mapping has to
+  happen. Changes can be at the content level, flow level, style level,
+  behaviour level. By content we are thinking that CRUD operations on
+  the content of a node can be done. That is, text of a node can be
+  Created, Updated, Read, Deleted. The same may apply for video, audio,
+  images etc.  
  - Flow changes mean that DOM order in target may be different from
    DOM order in source Style changes mean that color, font
    etc. may change in target 
