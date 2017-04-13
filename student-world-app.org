@@ -1,0 +1,97 @@
+#+title: Student World App
+#+AUTHOR:
+#+DATE: [2016-06-16 Thu]
+
+* Exploring concepts for development
+** StudentWorld App
+
+*** Work load
+- Creation of BookMarklet (BM)
+- Creation of Highlighter Web Service (HWS)
+- Creation of UniversityWorld knowledgebase
+          Creation of UniversityWorld Ontology
+          Query ability on the database
+          Gathering of public data to populate the knowledge base
+
+*** EndUser Actions on Current Page
+- Here are the sequence of actions by enduser and also bookmarklet on a given page:
+    User chooses a random page (e.g. Virutal Lab page)¡K called Current Page (CP)
+    User loads the bookmarklet (BM) onto that page; backend work of our BM begins
+    BM starts; registration is offered to user; User registers (we gather student name, university info, degree, year, male/female¡K)
+    BM searches currently loaded page CP
+    BM sends URL of CP to a web service called Highlighter Web Service (HWS)
+    HWS returns the page with markup or sends only where to markup in the CP
+    BM highlights the CP as per HWS instructions.
+    BM exposes a UI to the enduser
+    Enduser uses the UI to click on CP with highlights. 
+    BM recommends or does some action based on what is clicked.
+
+*** Highlighter Web Service
+- Takes a URL and fetches the page contents from the web
+- Removes style, images, audio, video¡K etc. Processes text only
+- Does NLP processing
+- Removes stop words
+- Finds entities or complex terms
+- Gives analytics (like term frequencies)
+- Accesses UniversityWorld database to find keyword matches between CP words and UniversityWorld data
+- Returns words to be tagged PLUS the tagging labels (i.e. List of {(XPATH + word location) and markupLabel})
+
+*** UniversityWorld database
+- Is a ontology of UniversityWorld and publicly found data
+    Ontology to be defined (action item: SaiG)
+    Ontology to link University, Professors, NPTEL, Virtual Lab, GATE/Course Syllabus¡K
+    Ontology should be an .owl file 
+- The following data should be gathered from public sources on the web. Data to be gathered includes:
+    University info (especially NPTEL participating universities)
+    Professor info (especially from participating Universities)
+    NPTEL metadata
+    Virtual lab metadata
+    Syallabus for CSE (scope is restricted; assumption we are only dealing with CSE)
+    GATE syllabus for CSE
+    GATE exam questions for previous CSE
+- UniversityWorld should be a accessible database on the cloud (MongoDB?)
+- Database should be queriable (e.g. SPARQL)
+
+*** Ontology
+- Student is-part-of University
+- Student is-part-of degree
+- Student takes course
+- Faculty teaches course
+- Course contains material
+- Material is-type videos, text, virtual labs
+- Course has syallabus
+- Syllabus has lesson plans, topics
+- Course has pedagogy
+- Pedagogy has instructions2students, quizzes, TopicExplanations
+
+*** Program Plan
+- Build a prototype by hand 
+    Find a student name, NPTEL class,
+    Syllabus, university, prof and Virtual lab and show what links /
+    associations are possible. And show how this is some interesting
+    value add to conventional virtual lab page.
+
+- Highlighter Web Service
+    V0.1 ¡V takes a url, gives out a 1) XPATH to agreed word, 2) label 
+      Word to match is ¡§virtual¡¨
+      Label to give is ¡§tag-this¡¨
+    V0.2 ¡V gives a list of xpaths with labels
+      Words to match are ¡§virtual, university, student¡¨
+      Labels to give are ¡§student, professor, ¡K¡¨
+    V0.3 ¡V works with external but simple knowledge base
+    V1.0 ¡V works with full University World knowledge base
+
+- BM
+    End-user Registration
+    Save End-user data, config info, ontology links, IP address for database on cloud¡K
+    UI for mouseclick by enduser
+    Should be able tag list of words with specified markup
+    Markup can be RDFa, Microformat etc.
+    Accessing web services (just one)
+    Accessing web services (different web services for different UI actions)
+
+- UniversityWorld Knowledge base
+    Creation of Ontology (*.owl file)
+    Adding data to Ontology
+    Putting it on cloud
+    Querying the database
