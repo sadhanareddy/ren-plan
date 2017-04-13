@@ -2,7 +2,7 @@
 #+Date: 13-04-2017
 #+Author:
 
-*  Renarration Framework
+* Renarration Framework
 
 ** Work for Framework includes
 + Creation of Renarration Viewer Portal (web App)
@@ -21,7 +21,7 @@
     environmental data like browser, time)
   - Viewer asks the user to enter a URL to fetch
   - User enters URL in textbox 
-  - Portal checks with RenarrationTable to see if there are any
+  - Portal checks with Renarration Table to see if there are any
     Renarrations for that URL
   - Portal shows the user all possible alternate views
     (i.e. renarrations) that are applicable to the user
@@ -35,7 +35,7 @@
      - Environmental data, Viewer Data etc. to be used in
        transformation. For example, conditions can be true / false based
        on this trigger data. E.g. Time of Daty, Browser used for viewing,
-       ViewerName who is viewing¡­
+       ViewerName who is viewing.
 
 ** Renarration Table
 + Maps URLs to likely renarration alternatives; should also have
@@ -61,7 +61,7 @@ images etc.
    source/target is being impacted.
  - By changes we mean that CRUD operations can be performed.  
  - SSS should be created in the Renarration Studio.
- - SSS should contain, WHO, WHAT, WHEN, WHERE, HOW, WHY¡­
+ - SSS should contain, WHO, WHAT, WHEN, WHERE, HOW, WHY....
 
 ** Renarration Studio
 + This is a web application portal (designed using FLASK? Python).
@@ -75,7 +75,7 @@ images etc.
   - Curator enters the URL
   - App fetches the DOM of the source
   - App displays the source DOM in a separate Iframe
-  - App provides a form for curator to enter the  WHAT, WHEN, WHERE¡­ 
+  - App provides a form for curator to enter the  WHAT, WHEN, WHERE....
   - Curator looks at  the  Source DOM and enters values into the table 
   - When Submit button is pressed, the info from the table is saved in
     the Cloud database in JSON/XML form. This is what we are calling
@@ -99,12 +99,12 @@ images etc.
 
 + SSS design
   - Using SSS as input to transform Source DOM to Target DOM
-  - V0.1 play only at node level. Add/del¡­ CRUD on nodes. SSS in v0.1
+  - V0.1 play only at node level. Add/delÂ¡Â­ CRUD on nodes. SSS in v0.1
     is very simple JSON/XML sheet
   - V0.2 play within the node. CRUD within the nodes. SSS in v0.2 is
     still very simple JSON/XML sheet but has info on the content
     within the node
-  - SSS 1.0 is a complete table with WHAT, WHEN¡­ info
+  - SSS 1.0 is a complete table with WHAT, WHENÂ¡Â­ info
   - V1.0 of SSS design is that a complete SSS is used to transform
     Source DOM to Target DOM.
 
