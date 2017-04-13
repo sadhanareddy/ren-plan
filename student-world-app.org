@@ -6,18 +6,18 @@
 ** StudentWorld App
 
 *** Work load
-- Creation of BookMarklet (BM)
-- Creation of Highlighter Web Service (HWS)
-- Creation of UniversityWorld knowledgebase
-          Creation of UniversityWorld Ontology
-          Query ability on the database
-          Gathering of public data to populate the knowledge base
++ Creation of BookMarklet (BM)
++ Creation of Highlighter Web Service (HWS)
++ Creation of UniversityWorld knowledgebase
+   - Creation of UniversityWorld Ontology
+   - Query ability on the database
+   - Gathering of public data to populate the knowledge base
 
 *** EndUser Actions on Current Page
 - Here are the sequence of actions by enduser and also bookmarklet on a given page:
-    User chooses a random page (e.g. Virutal Lab page)¡K called Current Page (CP)
+    User chooses a random page (e.g. Virutal Lab page)Â¡K called Current Page (CP)
     User loads the bookmarklet (BM) onto that page; backend work of our BM begins
-    BM starts; registration is offered to user; User registers (we gather student name, university info, degree, year, male/female¡K)
+    BM starts; registration is offered to user; User registers (we gather student name, university info, degree, year, male/femaleÂ¡K)
     BM searches currently loaded page CP
     BM sends URL of CP to a web service called Highlighter Web Service (HWS)
     HWS returns the page with markup or sends only where to markup in the CP
@@ -28,7 +28,7 @@
 
 *** Highlighter Web Service
 - Takes a URL and fetches the page contents from the web
-- Removes style, images, audio, video¡K etc. Processes text only
+- Removes style, images, audio, videoÂ¡K etc. Processes text only
 - Does NLP processing
 - Removes stop words
 - Finds entities or complex terms
@@ -39,7 +39,7 @@
 *** UniversityWorld database
 - Is a ontology of UniversityWorld and publicly found data
     Ontology to be defined (action item: SaiG)
-    Ontology to link University, Professors, NPTEL, Virtual Lab, GATE/Course Syllabus¡K
+    Ontology to link University, Professors, NPTEL, Virtual Lab, GATE/Course SyllabusÂ¡K
     Ontology should be an .owl file 
 - The following data should be gathered from public sources on the web. Data to be gathered includes:
     University info (especially NPTEL participating universities)
@@ -72,18 +72,18 @@
     value add to conventional virtual lab page.
 
 - Highlighter Web Service
-    V0.1 ¡V takes a url, gives out a 1) XPATH to agreed word, 2) label 
-      Word to match is ¡§virtual¡¨
-      Label to give is ¡§tag-this¡¨
-    V0.2 ¡V gives a list of xpaths with labels
-      Words to match are ¡§virtual, university, student¡¨
-      Labels to give are ¡§student, professor, ¡K¡¨
-    V0.3 ¡V works with external but simple knowledge base
-    V1.0 ¡V works with full University World knowledge base
+    V0.1 Â¡V takes a url, gives out a 1) XPATH to agreed word, 2) label 
+      Word to match is Â¡Â§virtualÂ¡Â¨
+      Label to give is Â¡Â§tag-thisÂ¡Â¨
+    V0.2 Â¡V gives a list of xpaths with labels
+      Words to match are Â¡Â§virtual, university, studentÂ¡Â¨
+      Labels to give are Â¡Â§student, professor, Â¡KÂ¡Â¨
+    V0.3 Â¡V works with external but simple knowledge base
+    V1.0 Â¡V works with full University World knowledge base
 
 - BM
     End-user Registration
-    Save End-user data, config info, ontology links, IP address for database on cloud¡K
+    Save End-user data, config info, ontology links, IP address for database on cloudÂ¡K
     UI for mouseclick by enduser
     Should be able tag list of words with specified markup
     Markup can be RDFa, Microformat etc.
