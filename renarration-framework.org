@@ -32,7 +32,7 @@
      - Transformation includes changes to content, flow, style, behaviour
      - Environmental data, Viewer Data etc. to be used in
        transformation. For example, conditions can be true / false based
-       on this trigger data. E.g. Time of Daty, Browser used for viewing,
+       on this trigger data. E.g. Time of Date, Browser used for viewing,
        ViewerName who is viewing.
 
 * Renarration Table
