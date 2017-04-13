@@ -1,0 +1,14 @@
+#+Title: Renarration Framework
+#+Date: 13-04-2017
+#+Author:
+
+*  Renarration Framework
+
+** Work for Framework includes
++ Creation of Renarration Viewer Portal (web App)
++ Creation of Renarration Studio Portal (web app)
++ Creation of Cloud Database
++ Structures that are needed for this framework to work include
++ Semantic Style Sheet to be designed
++ Record of info to be captured for Curator
++ Record of info to be captured for viewers
