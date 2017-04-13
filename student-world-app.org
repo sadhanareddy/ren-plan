@@ -9,9 +9,9 @@
 + Creation of BookMarklet (BM)
 + Creation of Highlighter Web Service (HWS)
 + Creation of UniversityWorld knowledgebase
-   Creation of UniversityWorld Ontology
-   Query ability on the database
-   Gathering of public data to populate the knowledge base
+   - Creation of UniversityWorld Ontology
+   - Query ability on the database
+   - Gathering of public data to populate the knowledge base
 
 *** EndUser Actions on Current Page
 - Here are the sequence of actions by enduser and also bookmarklet on a given page:
