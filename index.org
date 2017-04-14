@@ -215,4 +215,4 @@
   - SSS 1.0 is a complete table with WHAT, WHEN… info
   - V1.0 of SSS design is that a complete SSS is used to transform
     Source DOM to Target DOM.
-+Cloud Database design
++ Cloud Database design
