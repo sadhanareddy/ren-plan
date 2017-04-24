@@ -2,7 +2,9 @@
 @background: pink;
 @color: grey;
 
-@json-import "https://cdn.rawgit.com/sadhanareddy/ren-plan/9f1ff2b4/user_data.json";
+@json_file: user_data.json;
+
+@json: ~`json = function($key) { var request = new XMLHttpRequest(); request.open("GET", "@{json_file}", false); request.send(null); var my_json = JSON.parse(request.responseText); return my_json[$key]; }`;
 
 h3{
   font-size: @font-size;
@@ -11,5 +13,5 @@ h3{
 }
 
 h2{
-  background: @color1;
+  background: ~`json('color1')`;
 }
