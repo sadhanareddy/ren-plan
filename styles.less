@@ -2,9 +2,9 @@
 @background: pink;
 @color: grey;
 
-@json_file: user_data.json;
+/*@json_file: user_data.json;
 
-@json: ~`json = function($key) { var request = new XMLHttpRequest(); request.open("GET", "@{json_file}", false); request.send(null); var my_json = JSON.parse(request.responseText); return my_json[$key]; }`;
+@json: ~`json = function($key) { var request = new XMLHttpRequest(); request.open("GET", "@{json_file}", false); request.send(null); var my_json = JSON.parse(request.responseText); return my_json[$key]; }`; */
 
 h3{
   font-size: @font-size;
@@ -12,6 +12,6 @@ h3{
   color: @color;
 }
 
-h2{
+/*h2{
   background: ~`json('color1')`;
-}
+}*/
