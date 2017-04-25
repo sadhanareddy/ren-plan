@@ -1,0 +1,110 @@
+#+Title: 
+#+Date: [25-04-17, Tue] 
+
+* Document Introduction
+  In this document we are working on semantic style sheet portion of
+  the renarration framework. We are not including work on renarration
+  studio or renararration viewer portals in this document and we are
+  also not including work on cloud.
+
+  The scope of this document is only v0.1, which is defined as "V0.1
+  play only at node level. Add/del¡­ CRUD on nodes. SSS in v0.1 is very
+  simple JSON/XML sheet." The other versions for the SSS portion are
+  given in index.org.
+ 
+* Overview of functionality 
+  There are four tasks that should be handled for v0.1.
+  + We need to build capability to do CRUD operations at node
+    level. This functionality is tilted as "CAPABILITY".
+  
+  + We need to have a mechanism to use the capability that is defined
+    in capability section. We call this "SCRIPTING WORK".
+  
+  + There has to be mechanism which reads the script and uses the
+    capability to renarrate. We call this "ENGINE WORK".
+   
+  + We need a story that links the engine, the script and the
+    capability for a specific application. We call this "PROBLEM
+    SPACE".
+
+* Capabilty   
+  Api.org file come here....
+* Script
+  We need to develop a lang for SSS that is similar to CSS but uses the 
+  capability that we defined.
+  We may need to use preprocessor for converting SSS to CSS for rendering.
+  We are looking into "LESS" and other tools...
+  See script.org.
+  + Style sheet uses API's to create transformation.
+  + SS should have a way of linking source DOM to target DOM.
+  + SS should contain selectors based on lexicon of the user defined structure.
+  + SS may be written in a renarration studio type application. 
+  + There could be more than one SS for a given page.
+  + Each SS may produce its own variant of the source page.
+  + SS can be a "Excel Sheet" with each row being instructions. Each
+    instuction can talk about a specific link between source DOM and
+    target DOM. There could be many rows of instruction in one
+    sheet. Each instruction row may either do a CRUD operations on
+    source to produce target.
+
+* Engine
+* Problem Space
+There are atleast there are two applications that we can envisage
+for our renarration work.
+
+** Problem Description - Strip Struct Page
+Most of the web nowadays seems to be dynamically genarated by some
+backend website applications. 
+Eg: Sites include "Amazon","dictionary", "Vlabs".  
+Such pages rely on standard templates which contain the core raw content. 
+The standard template features include such things as, Navigation info,
+ads, Links to FB, Twitter..., Corporate info, Promotional items etc.,
+These template features are common across various pages on that site. 
+Users who are only interseted in raw content may want to eliminate the
+template features and only see raw content transformed to their taste.
+In this usecase, we imagine user going to these structured pages, removing
+the features of the template item and transforming raw content by changing
+lang, currency and units of measure.
+ 
+** Problem Description - Blooms taxonomy
+
+This problem assumes that most pages have lot of good static content 
+that can be tagged by blooms taxonomy and subsequently reused to 
+produce questions or learning content for user.
+For this we assume that volunteer tags static content using blooms
+and applications use this tagged content to renarrate page.
+
+** Connecting the dots 
+Transformation Engine does renarration on source page to produce a
+target page. We are seeing this as source to taget DOM
+transformation. To make the transformation the engine requires rules(
+Script or instructions ), triggers and tagged content.
+
+The rules are also called script or instructions. They are specific
+instructions that do operations on source DOM to target DOM. There
+could be many instructions to systamitacally alter source to target.
+These rules are contained in the style sheet. Rules use API's to make
+the change. See script.org.
+
+Triggers can be from user data or enviromental data. Environmental
+data includes such things as browser info, date, time etc., . User
+info can be such things as user name, user preferences, group
+name... which can be obtained during the user registration.
+
+Structuring of data
+include Diagram that shows API triggered structure
+ 
+* Tasks to be done
++ Look into "LESS"- this is related  
++ Develop API's - 
+  - This is part of capabilty section. 
+  - This will be done in stages.
+  - See API.org
+
+
++ Manually tag structured pages for dictionry.com, Amazon, Vlabs.
++ Come up with a simple style sheet that can be imposed on manually
+tagged structured pages.
++ Automate the reading of the style sheet to produce renarration.
+ 
+ 
