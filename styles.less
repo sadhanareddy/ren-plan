@@ -2,15 +2,6 @@
 @background: pink;
 @color: grey;
 
-@json_file: https://cdn.rawgit.com/sadhanareddy/ren-plan/fa2a0b00/user_data.json;
-
-@json: ~`json = function($key) {
-       	      	var request = new XMLHttpRequest();
-       	        request.open("GET", "@{json_file}", false);
-		request.send(null);
-		var my_json = JSON.parse(request.responseText);
-		return my_json[$key];
-	      }`; 
 
 h3{
   font-size: @font-size;
