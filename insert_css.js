@@ -1,4 +1,5 @@
 createElements()
+importJson()
 function createElements(){
     
    var script = document.createElement('script');
@@ -12,4 +13,12 @@ function createElements(){
    link.href = "https://cdn.rawgit.com/sadhanareddy/ren-plan/79237d50/styles.less";
    document.getElementsByTagName('head')[0].appendChild(link);
 
+}
+
+function importJson(){
+   var request = new XMLHttpRequest();
+   request.open("GET", "https://cdn.rawgit.com/sadhanareddy/ren-plan/375855e2/user_data.json", false);
+   request.send(null);
+   var my_json = JSON.parse(request.responseText);
+   less.modifyVars(my_json);
 }
