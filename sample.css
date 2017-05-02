@@ -1,0 +1,8 @@
+h2{
+   color: ~`json('color1')`;
+   background-color: ~`json('color2')`;
+}
+
+body{
+   background-color: ~`json('color2')`;
+}
