@@ -17,3 +17,10 @@ h2{
 body{
    background-color: ~`json('color2')`;
 }
+
+
+if(@theme-support){
+  body{
+     background: green;
+  }
+}
