@@ -10,7 +10,7 @@ function createElements(){
    var link = document.createElement('link');
    link.rel = "stylesheet/less";
    link.type = "text/css";
-   link.href = "https://cdn.rawgit.com/sadhanareddy/ren-plan/a86ea60a/styles.less";
+   link.href = "";
    document.getElementsByTagName('head')[0].appendChild(link);
 
 }

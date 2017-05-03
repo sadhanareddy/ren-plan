@@ -3,13 +3,14 @@
 @color-text:purple;
 @color1:red;
 @selector:h2;
+@import "https://cdn.rawgit.com/sadhanareddy/ren-plan/82664d98/user_data.json";
 
 body{
-   background: @color1;
+   background: @color;
 }
 
 h3{
-  background:@color1;
+  background:@color;
 }
 
 /*if(@selector == 'h2'){
@@ -20,8 +21,8 @@ h2{
 }*/
 
 @{selector} {
-   color: @color-text;
-   background-color: @color-text;
+   color: @color;
+   background-color: @color;
 }
 
 
