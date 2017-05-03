@@ -1,8 +1,8 @@
 @font-size: 56px;
 @background: pink;
-@color-text:grey;
+@color-text:purple;
 @color1:red;
-@selector:'h2';
+@selector:h2;
 
 body{
    background: @color1;
@@ -12,11 +12,16 @@ h3{
   background:@color1;
 }
 
-if(@selector == 'h2'){
+/*if(@selector == 'h2'){
 h2{
    color: @color-text;
    background-color: @color-text;
 }
+}*/
+
+@{selector} {
+   color: @color-text;
+   background-color: @color-text;
 }
 
 
