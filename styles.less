@@ -5,9 +5,14 @@
 @selector:h2;
 @a:@b;
 @b:blue;
+@user_name:sadhana;
+@age:70;
+@profession:student;
+@language:telugu;
 
 body{
    background: @color-text;
+   .mixin(@age)
 }
 
 h3{
@@ -26,6 +31,9 @@ h2{
    background-color: @a;
 }
 
+.mixin(@age) when ( @age>60 ){
+   font-size: 200px;
+}
 
 
 
