@@ -10,13 +10,12 @@
 @profession:student;
 @language:telugu;
 
-body{
+/*body{
    background: @color-text;
-   .mixin(@age)
-}
+}*/
 
 h3{
-  background: @a;
+   background: @a;  
 }
 
 /*if(@selector == 'h2'){
@@ -28,12 +27,16 @@ h2{
 
 @{selector}{
    color: @a;
-   background-color: @a;
+   //background-color: @a;
+   .mixin(@age);
 }
 
 .mixin(@age) when ( @age>60px ){
    font-size: 200px;
+   background: green;
 }
+
+
 
 
 
