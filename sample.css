@@ -24,3 +24,9 @@ if(@theme-support){
      background: green;
   }
 }
+
+@selector{
+  font-size: @font-size;
+  background-color: @color1;
+  color: @color1;
+}
