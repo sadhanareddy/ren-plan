@@ -10,14 +10,14 @@ function createElements(){
    var link = document.createElement('link');
    link.rel = "stylesheet/less";
    link.type = "text/css";
-   link.href = "https://cdn.rawgit.com/sadhanareddy/ren-plan/afc5af5d/styles.less";
+   link.href = "https://cdn.rawgit.com/sadhanareddy/ren-plan/b1ea354c/styles.less";
    document.getElementsByTagName('head')[0].appendChild(link);
 
 }
 
 function importJson(){
    var request = new XMLHttpRequest();
-   request.open("GET", "https://cdn.rawgit.com/sadhanareddy/ren-plan/afc5af5d/user_data.json", false);
+   request.open("GET", "https://cdn.rawgit.com/sadhanareddy/ren-plan/b1ea354c/user_data.json", false);
    request.send(null);
    var my_json = JSON.parse(request.responseText);
    less.modifyVars(my_json);
