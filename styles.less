@@ -6,7 +6,7 @@
 @a:@b;
 @b:blue;
 @user_name:sadhana;
-@age:70px;
+@age:70;
 @profession:student;
 @language:telugu;
 
@@ -31,10 +31,12 @@ h2{
    .mixin(@age);
 }
 
-.mixin(@age) when ( @age>60px ){
+.mixin(@age) when ( @age>60 ){
    font-size: 200px;
    background: green;
 }
+
+
 
 
 
