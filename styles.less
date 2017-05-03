@@ -1,11 +1,11 @@
 @font-size: 56px;
 @background: pink;
-@color-text:purple;
+@color-text:purple !important;
 @color1:red;
 @selector:h2;
 //@import "https://cdn.rawgit.com/sadhanareddy/ren-plan/82664d98/user_data.json";
 @a:@b;
-@b:blue;
+//@b:blue !important;
 
 body{
    background: @color-text;
@@ -24,7 +24,7 @@ h2{
 
 @{selector} {
    color: @color-text;
-   background-color: @a;
+   background-color: @color-text;
 }
 
 
